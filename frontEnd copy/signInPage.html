@@ -2,15 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="backend/darkMode_lightMode.js"></script>
-    <script src="backend/login.js"></script>
+    <title>Sign In</title>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-    <div class='dark'></div>
+
+    <!-- SignIn Window -->
     <div class="mainWindow">
         <h1 class="heading">Sign in</h1>
         <h4>Name:</h4>
@@ -22,6 +20,12 @@
         <br>
         <button id="redirector" onclick="redirect()">Don't have an account yet?</button>
     </div>
+
+    <!-- Button to change the theme -->
     <button id='changeTheme' onclick="executeChange()">CLICK</button>
+
+    <!-- JavaScript files -->
+    <script src="../backend/darkMode_lightMode.js"></script>
+    <script src="../backend/login.js"></script>
 </body>
 </html>
