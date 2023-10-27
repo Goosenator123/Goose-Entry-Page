@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Convertor</h1>
+    <input id="Input" type='text'>
+    <input type="button" value = "convert" onclick = "convert()"/>
+    <h4 id ="Text"></h4>
+
+    <script>
+        var cad;
+        function convert(){
+            cad = document.getElementById("Input").value;
+            cad *= 0.74;
+            document.getElementById("Text").innerHTML = cad + "USD";
+        }
+    </script>
+</body>
+</html>

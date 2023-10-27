@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <!-- Import the Roboto font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    
+    <!-- Link to an external CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    
+    <!-- Import Google's icons  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+
+<body>
+
+    <!-- Background divs for light and dark themes -->
+        <div id="backgroundImage"></div>
+
+    <!-- SignUp Window -->
+    <div class="mainWindow">
+        
+        <h1 class="title">SIGN IN</h1>
+
+        <!-- Input and labels for username -->
+        <div class="inputPosition">
+            <input class="inputBox"  id="username" type="text" required>
+            <div class="inputLabel">
+                <label style="cursor:text;" for="username" class="placeholder">Username</label>
+            </div>
+        </div>
+
+        <!-- Input and labels for password-->
+        <div class="inputPosition">
+            <input class="inputBox" id="password" type="password" required>
+            <div class="inputLabel">
+                <label style="cursor:text;" for="password" class="placeholder">Password</label>
+            </div>
+        </div>
+
+        <!-- Sign-in buttons -->
+        <div class="signInSection">
+            <button id="backgroundButton">SIGN IN</button>
+            <button id="signInButton">SIGN IN</button>
+        </div>
+
+        <!-- Redirect to create an account section -->
+        <div class="redirectSection">
+            <label id="redirectLabel" for="redirectButton">Dont have an account?</label>
+            <button id="redirectButton">Create Now</button>
+        </div>
+    </div>
+
+        <!-- Icons section with dark and light mode buttons -->
+    <div class="icon">
+        <button class="icon-button" id="darkButton">
+            <span class="material-symbols-outlined custom">Dark_Mode</span>
+        </button>
+        <button class="icon-button" id="lightButton">
+            <span class="material-symbols-outlined custom">Light_mode</span>
+        </button>
+        <button class="icon-button" id="changeTheme"></button>
+    </div>
+
+
+    <!-- JavaScript files -->
+    <script src="../js/login.js"></script>
+    <script src="../js/darkMode_lightMode.js"></script>
+</body>
+</html>

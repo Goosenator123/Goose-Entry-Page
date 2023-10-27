@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+      text-align: center;
+      background-image: url(UntitledGoose.jpg);
+      background-size:100vw;
+      background-repeat: no-repeat;
+    }
+    h1{
+        color: goldenrod;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #Title{
+        border: 10px double goldenrod;
+        font-size: 2cm;
+        font-weight: bold ;
+    }
+
+</style>
+
+<body>
+    <h1 id="Title">Welcome to CornHub</h1>
+    <h1>Age Verification</h1>
+    <input type="text", id="age", placeholder="Your Age Human">
+    <input type="button", onclick="verify()", value="Verify">
+    <h2 id="Answer"></h2>
+</body>
+
+<script>
+    function verify(){
+        age = document.getElementById("age").value;
+
+        if (age >= 18){
+            document.getElementById("Answer").innerHTML = "get in"
+        }
+        else{
+            alert("You are underaged! Get out!")
+            window.close() 
+        }
+    }
+</script>
+</html>
+
