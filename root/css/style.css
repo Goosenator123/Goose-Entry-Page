@@ -132,15 +132,25 @@ input:valid + .inputLabel {
 .errorMessage {
     position: relative;
     color: var(--error-color);
-    font-size: 1.5vh;
+    font-size: 2vh;
     visibility: hidden;
     margin-bottom: 6vh;
 }
 
+
+/* Error message for sign up */
 #errorUserLength, #errorUserTaken,
-#errorPswLength, #errorPswSymbol, #errorPswUpper {
+#errorPswLength, #errorPswSymbol, 
+#errorPswUpper{
     position: absolute;
     top: 1vh;
+    left: 0;
+}
+
+/* Error message for sign in */
+#errorInvalid, #errorUserExist{
+    position: absolute;
+    top: -5vh;
     left: 0;
 }
 

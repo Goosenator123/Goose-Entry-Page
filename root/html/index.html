@@ -23,64 +23,42 @@
     <!-- SignUp Window -->
     <div class="mainWindow">
         
-        <h1 class="title">SIGN UP</h1>
+        <h1 class="title">SIGN IN</h1>
 
-        <!-- Form -->
-        <form id="signInForm" novalidate>
-
-            <!-- Input and label for username -->
-            <div class="inputPosition">
-                <input class="inputBox"  id="username" type="text" required>
-                <div class="inputLabel">
-                    <label style="cursor:text;" for="username" class="placeholder">Username</label>
-                </div>
-
-                <!-- Error messages for username -->
-                <div class="errorMessage">
-                    <label id="errorUserLength"></label>
-                    <label id="errorUserTaken"></label>
-                </div>
+        <!-- Input and labels for username -->
+        <div class="inputPosition">
+            <input class="inputBox"  id="username" type="text" required>
+            <div class="inputLabel">
+                <label style="cursor:text;" for="username" class="placeholder">Username</label>
             </div>
+        </div>
 
-            <!-- Input and label for password -->
-            <div class="inputPosition">
-                <input class="inputBox" id="password" type="password" required>
-                <div class="inputLabel">
-                    <label style="cursor:text;" for="password" class="placeholder">Password</label>
-                </div>
-
-                <!-- error messages for password -->
-                <div class="errorMessage">
-                    <label id="errorPswLength"></label>
-                    <label id="errorPswSymbol"></label>
-                    <label id="errorPswUpper"></label>
-                </div>
+        <!-- Input and labels for password-->
+        <div class="inputPosition">
+            <input class="inputBox" id="password" type="password" required>
+            <div class="inputLabel">
+                <label style="cursor:text;" for="password" class="placeholder">Password</label>
             </div>
+        </div>
 
-            <!-- Input and labels for confirmation-->
-            <div class="inputPosition">
-                <input class="inputBox" id="confirm-password" type="password" required>
-                <div class="inputLabel">
-                    <label style="cursor:text;" for="confirm-password" class="placeholder">Confirm Password</label>
-                </div>
-
-                <!-- Error messages for confirmation -->
-                <div class="errorMessage">
-                    <label id="errorConfirmation"></label>
-                </div>
+        <!-- Error message for invalid login -->
+        <div class="inputPosition">
+            <div class="errorMessage">
+                <label id="errorInvalid"></label>
+                <label id="errorUserExist"></label>
             </div>
-        
-            <!-- Sign-in buttons -->
-            <div class="signUpSection">
-                <button id="backgroundButton">SIGN UP</button>
-                <button type="submit" id="signUpButton">SIGN UP</button>
-            </div>
-        </form>
+        </div>
 
-        <!-- Redirect to Sign In page -->
+        <!-- Sign-in buttons -->
+        <div class="signInSection">
+            <button id="backgroundButton">SIGN IN</button>
+            <button id="signInButton">SIGN IN</button>
+        </div>
+
+        <!-- Redirect to create an account section -->
         <div class="redirectSection">
-            <label id="redirectLabel" for="redirectButton">Already have an account?</label>
-            <button id="redirectButton">Sign in now</button>
+            <label id="redirectLabel" for="redirectButton">Dont have an account?</label>
+            <button id="redirectButton">Create Now</button>
         </div>
     </div>
 
@@ -97,8 +75,7 @@
 
 
     <!-- JavaScript files -->
-
+    <script src="../js/login.js"></script>
     <script src="../js/darkMode_lightMode.js"></script>
-    <script src="../js/register.js"></script>
 </body>
 </html>

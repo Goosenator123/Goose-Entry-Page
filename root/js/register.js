@@ -3,6 +3,13 @@ const signUp = document.getElementById("signUpButton");
 const signInForm = document.getElementById("signInForm");
 const redirectButton = document.getElementById("redirectButton");
 
+// Get references to error messages for validation
+const errorUserLength = document.getElementById("errorUserLength");
+const errorUserTaken = document.getElementById("errorUserTaken");
+const errorPswLength = document.getElementById("errorPswLength");
+const errorPswUpper = document.getElementById("errorPswUpper");
+const errorConfirmation = document.getElementById("errorConfirmation");
+
 // Function to check if a password contains special characters
 function containsSpecialCharacter(password) {
     const specialCharacterPattern = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\|]/;
@@ -17,7 +24,27 @@ function containsUpperCase(password) {
 
 // Function to redirect to another page
 function redirecting() {
-    window.location.href = "signInPage.html";
+    window.location.href = "index.html";
+}
+
+// Prevent the Enter key to submit form early
+function preventSubmission(e){
+    if(e.key == "Enter"){
+        register(e)
+        e.preventDefault();
+    }
+}
+
+// Function to check if a username is already taken
+const checkUsername = (username) => {
+    const storedUserData = localStorage.getItem(username);
+
+    if (storedUserData) {
+        const existingUsername = JSON.parse(storedUserData);
+        return existingUsername.username === username;
+    }
+
+    return false;
 }
 
 // Function to handle user registration
@@ -26,25 +53,6 @@ function register(event) {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirm-password").value;
-
-    // Get references to error messages for validation
-    const errorUserLength = document.getElementById("errorUserLength");
-    const errorUserTaken = document.getElementById("errorUserTaken");
-    const errorPswLength = document.getElementById("errorPswLength");
-    const errorPswUpper = document.getElementById("errorPswUpper");
-    const errorConfirmation = document.getElementById("errorConfirmation");
-
-    // Function to check if a username is already taken
-    const checkUsername = (username) => {
-        const storedUserData = localStorage.getItem(username);
-
-        if (storedUserData) {
-            const existingUsername = JSON.parse(storedUserData);
-            return existingUsername.username === username;
-        }
-
-        return false;
-    };
 
     // Validation checks for the registration form
     if (
@@ -71,7 +79,7 @@ function register(event) {
             errorUserTaken.style.visibility = "visible";
             errorUserTaken.textContent = "The username is already taken";
             let data = localStorage.getItem(username);
-            console.log('The password is ' + data);
+            console.log('The existing account is ' + data);
         } else {
 
             // Error messages for invalid passwords
@@ -106,6 +114,6 @@ function register(event) {
 
 // Attach a click event listener to the signup button to trigger the registration process
 signUp.addEventListener("click", register);
-
+document.addEventListener("keydown", preventSubmission)
 // Attach a click event listener to the redirect button to trigger the redirection
 redirectButton.addEventListener("click", redirecting);
