@@ -4,18 +4,18 @@
     --shadow-color: black; /* Shadow color */
     --word-color: black; /* Text color */
     --bg-image: url("../../images-videos/Goose_Light.png"); /* Background image */
-    --container-color: rgb(0, 255, 255);
-    --container-bg: rgb(222, 222, 222);
+    --container-color: rgb(0, 255, 255); /* Container color */
+    --container-bg: rgb(222, 222, 222); /* Container background color */
 }
 
 /* Dark mode variables */
 .dark {
-    --bg-color: black;
-    --shadow-color: white;
-    --word-color: white;
-    --bg-image: url("../../images-videos/Goose_Dark.png");
-    --container-color: rgb(0, 13, 255);
-    --container-bg: rgba(120, 120, 120, 0.883);
+    --bg-color: black; /* Dark mode background color */
+    --shadow-color: white; /* Dark mode shadow color */
+    --word-color: white; /* Dark mode text color */
+    --bg-image: url("../../images-videos/Goose_Dark.png"); /* Dark mode background image */
+    --container-color: rgb(0, 13, 255); /* Dark mode container color */
+    --container-bg: rgba(120, 120, 120, 0.883); /* Dark mode container background color */
 }
 
 /* Body background color transition */
@@ -42,33 +42,33 @@ body {
     transition: background-image 0.5s; /* Smooth background image transition */
 }
 
-.main-window{
+.main-window {
     border: 3px groove var(--word-color);
     background-color: var(--bg-color);
-    transition: border-color 0.5s, background-color 0.5s;
+    transition: border-color 0.5s, background-color 0.5s; /* Smooth border and background color transition */
 }
 
-.h1-container{
+.h1-container {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--container-color);
     margin: 20px;
     border: 3px groove var(--word-color);
-    transition: background-color 0.5s;
+    transition: background-color 0.5s; /* Smooth container background color transition */
 }
 
-h1, p{
+h1, p {
     color: var(--word-color);
-    transition: color 0.5s;
+    transition: color 0.5s; /* Smooth text color transition */
 }
 
-.text-container{
+.text-container {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--container-bg);
     margin: 20px;
     padding: 10px;
-    transition: background-color 0.5s;
+    transition: background-color 0.5s; /* Smooth container background color transition */
 }

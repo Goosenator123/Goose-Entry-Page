@@ -8,7 +8,7 @@
     <!-- Import the Roboto font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     
-    <!-- Link to an external CSS stylesheet -->
+    <!-- Link to an external CSS stylesheet for styling -->
     <link rel="stylesheet" type="text/css" href="../css/secondPageStyle.css">
     <link rel="stylesheet" type="text/css" href="../css/darkLightModeStyle.css">
 
@@ -23,15 +23,18 @@
     <div id="backgroundImage"></div>
 
     <div class="main-window">
+        <!-- Container for the main title -->
         <div class="h1-container">
             <h1 id="easter-egg-title">EASTER EGGS</h1>
         </div>
+
+        <!-- Container for text content -->
         <div class="text-container">
             <p> - Did you try typing rickroll as your username in the login/signup page?
                 <br>
                 - Try watching the 'totally not suspicious' video at the bottom of the video window in the first page.
                 <br>
-                - If you forgot your password or username, open  the local storage with inspect.
+                - If you forgot your password or username, open the local storage with inspect.
             </p>
             <br>
         </div>
@@ -58,13 +61,11 @@
         </div>
     </div>
 
+    <!-- JavaScript files -->
+    <script src="../js/secondPage.js"></script>
+    <script src="../js/darkMode_lightMode.js"></script>
 
-    
-        <!-- JavaScript files -->
-        <script src="../js/secondPage.js"></script>
-        <script src="../js/darkMode_lightMode.js"></script>
-
-    <!-- JavaScript code -->
+    <!-- JavaScript code for page navigation -->
     <script>
         function nextPage(){
             window.location.href = "firstPage.html";

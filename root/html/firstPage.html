@@ -7,34 +7,41 @@
     <!-- Import the Roboto font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     
-    <!-- Link to an external CSS stylesheet -->
+    <!-- Link to an external CSS stylesheet for dark/light mode -->
     <link rel="stylesheet" type="text/css" href="../css/darkLightModeStyle.css">
+    
+    <!-- Link to an external CSS stylesheet for the first page styles -->
     <link rel="stylesheet" type="text/css" href="../css/firstPageStyle.css">
     
-    <!-- Import Google's icons  -->
+    <!-- Import Google's icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-
     <div class="page">
-        <!-- Background image -->
+        <!-- Background image container -->
         <div name="backgroundImage" id="backgroundImage"></div>
 
+        <!-- Welcome text -->
         <div id="h1-container">
             <h1 name="welcome-text" id="welcome-text">Welcome to the site!</h1>
         </div>
+
+        <!-- Subtitle -->
         <div id="h3-container">
-            <h3 name="subject-text" id="subject-text">Want to learn how to code? </h2>
+            <h3 name="subject-text" id="subject-text">Want to learn how to code? </h3> <!-- Corrected closing tag -->
         </div>
 
+        <!-- Content boxes -->
         <div class="content-box">
             <div name="content-top" class="content-top">
+                <!-- Websites window -->
                 <div class="window" id="websites">
                     <div class="text-container">
                         <p class="window-text">Visit these websites</p>
                     </div>
                     <div class="main">
                         <div class="row">
+                            <!-- Website container: W3School -->
                             <div class="website-container" id="w3school">
                                 <button class="main-button" id="w3school-button">W3School</button>
                                 <a href="https://www.w3schools.com" target="_blank">    
@@ -43,6 +50,7 @@
                                     </div>
                                 </a>
                             </div>
+                            <!-- Website container: FreeCodeCamp -->
                             <div class="website-container" id="freecodecamp">
                                 <button class="main-button" id="freecodecamp-button">freecodecamp</button>
                                 <a href="https://www.freecodecamp.org" target="_blank">
@@ -53,6 +61,7 @@
                             </div>
                         </div>
                         <div class="row">
+                            <!-- Website container: Codecademy -->
                             <div class="website-container" id="codecademy">
                                 <button class="main-button" id="codecademy-button">Codecademy</button>
                                 <a href="https://www.codecademy.com" target="_blank">
@@ -61,6 +70,7 @@
                                     </div>
                                 </a>
                             </div>
+                            <!-- Website container: MDN Web Docs -->
                             <div class="website-container" id="MDN">
                                 <button class="main-button" id="MDN-button">MDN Web Docs</button>
                                 <a href="https://developer.mozilla.org/en-US/" target="_blank">
@@ -72,6 +82,8 @@
                         </div>
                     </div>            
                 </div>
+
+                <!-- Videos window -->
                 <div class="window" id="videos">
                     <div class="text-container">
                         <p class="window-text">Check out these videos</p>
@@ -88,12 +100,14 @@
                 </div>
             </div>
             <div class="content-bottom">
+                <!-- Editors window -->
                 <div class="window" id="editors">
                     <div class="text-container">
                         <p class="window-text">Start today!</p>
                     </div>
                     <div class="main">
                         <div class="row">
+                            <!-- Editor container: Visual Studio Code -->
                             <div class="editor-container" id="vscode">
                                 <button class="main-button" id="vscode-button">Visual Studio Code <code></code></button>
                                 <a href="https://code.visualstudio.com/download" target="_blank">
@@ -102,6 +116,7 @@
                                     </div>
                                 </a>
                             </div>
+                            <!-- Editor container: Sublime Text -->
                             <div class="editor-container" id="sublimetext">
                                 <button class="main-button" id="sublimetext-button">Sublime Text</button>
                                 <a href="https://www.sublimetext.com" target="_blank">
@@ -110,6 +125,7 @@
                                     </div>
                                 </a>
                             </div>
+                            <!-- Editor container: JetBrains Editors -->
                             <div class="editor-container" id="jetbrains">
                                 <button class="main-button" id="jetbrains-button">Jet Brains' editors</button>
                                 <a href="https://www.jetbrains.com/products/" target="_blank">
@@ -150,7 +166,7 @@
     <script src="../js/darkMode_lightMode.js"></script>
     <script src="../js/firstPage.js"></script>
 
-    <!-- JavaScript code -->
+    <!-- JavaScript code for page navigation -->
     <script>
         function nextPage(){
             window.location.href = "secondPage.html";
