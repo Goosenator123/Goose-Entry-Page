@@ -1,0 +1,91 @@
+/* Root colors */
+:root {
+    --default-color: black;
+    --return-button: linear-gradient(to left, rgb(255, 191, 0), rgb(255, 68, 68));
+}
+
+/* Dark mode variables */
+.dark {
+    --default-color: white;
+    --return-button: linear-gradient(to left, rgb(0, 153, 255), rgb(4, 0, 255));
+}
+
+/* Dark/Light mode button styles */
+.icon {
+    position: fixed;
+    top: 80%;
+    left: 3%;
+}
+
+.icon-button {
+    border: black;
+    border-radius: 100px;
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    z-index: 100;
+}
+
+.material-symbols-outlined.custom {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#darkButton {
+    background-color: black;
+    color: rgb(0, 255, 247);
+    border: 3px solid rgb(0, 225, 255);
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#lightButton {
+    background: rgba(255, 255, 0,);
+    color: rgb(0, 255, 234);
+    border: 3px solid rgb(98, 255, 255);
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#changeTheme {
+    opacity: 0;
+}
+
+/* Return/Forward button styles */
+.return-forward {
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: left;
+}
+
+#return-button{
+    position: absolute;
+    left: 0;
+}
+
+#forward-button{
+    position: absolute;
+    right: 0;
+}
+
+.icon-button2 {
+    border: 3px solid ;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 20px;
+    width: 80px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: var(--default-color);
+    background: var(--return-button);
+    transition: color 0.5s, background 0.5s;
+}
+
+

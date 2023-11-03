@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <!-- Import the Roboto font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    
+    <!-- Link to an external CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../css/secondPageStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/darkLightModeStyle.css">
+
+    <!-- Import Google's icons  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+
+<body>
+
+    <!-- Background divs for light and dark themes -->
+    <div id="backgroundImage"></div>
+
+    <div class="main-window">
+        <div class="h1-container">
+            <h1 id="easter-egg-title">EASTER EGGS</h1>
+        </div>
+        <div class="text-container">
+            <p> - Did you try typing rickroll as your username in the login/signup page?
+                <br>
+                - Try watching the 'totally not suspicious' video at the bottom of the video window in the first page.
+                <br>
+                - If you forgot your password or username, open  the local storage with inspect.
+            </p>
+            <br>
+        </div>
+
+        <!-- Icons section with forward and return buttons -->
+        <div class="return-forward">
+            <button class="icon-button2" id="return-button" onclick="backPage()">
+                <span class="material-symbols-outlined custom">Arrow_back</span>
+            </button>
+            <button class="icon-button2" id="forward-button" onclick="nextPage()">
+                <span class="material-symbols-outlined custom">Arrow_forward</span>
+            </button>
+        </div>
+
+        <!-- Icons section with dark and light mode buttons -->
+        <div class="icon">
+            <button class="icon-button" id="darkButton">
+                <span class="material-symbols-outlined custom">Dark_Mode</span>
+            </button>
+            <button class="icon-button" id="lightButton">
+                <span class="material-symbols-outlined custom">Light_mode</span>
+            </button>
+            <button class="icon-button" id="changeTheme"></button>
+        </div>
+    </div>
+
+
+    
+        <!-- JavaScript files -->
+        <script src="../js/secondPage.js"></script>
+        <script src="../js/darkMode_lightMode.js"></script>
+
+    <!-- JavaScript code -->
+    <script>
+        function nextPage(){
+            window.location.href = "firstPage.html";
+        }
+
+        function backPage(){
+            window.location.href = "firstPage.html";
+        }
+    </script>
+</body>
+</html>

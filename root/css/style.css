@@ -28,12 +28,14 @@
 
 /* Body background color transition */
 body {
+    font-family: 'Roboto', sans-serif;
     background: var(--bg-color);
     transition: background 0.5s; /* Smooth background color transition */
 }
 
 /* Background image for the main window */
 #backgroundImage {
+    position: fixed;
     z-index: -1;
     background-image: var(--bg-image);
     background-attachment: fixed;
@@ -61,14 +63,12 @@ body {
     left: 50%;
     padding: 1vh;
     transform: translate(-50%, -50%);
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
     transition: background-color 0.5s, box-shadow 0.5s;
 }
 
 /* Title styles */
 h1 {
-    font-size: 7vh;
+    font-size: 7vmin;
     margin: 1em;
     text-align: center;
     color: var(--word-color);
@@ -78,20 +78,20 @@ h1 {
 /* Styles for input and label */
 .inputPosition {
     position: relative;
-    margin-bottom: 6vh;
-    margin-right: 6vh;
-    margin-left: 6vh;
+    margin-bottom: 5vmin;
+    margin-right: 6vmin;
+    margin-left: 6vmin;
 }
 
 .inputBox {
     color: var(--word-color);
-    height: 3vh;
-    font-size: 3vh;
+    height: 3vmin;
+    font-size: 3vmin;
     border: 0;
     border-radius: 2px;
     border-bottom: 3px solid var(--input-color);
     outline: none;
-    width: 12em;
+    width: 35vmin;
     background-color: transparent;
     transition: border-bottom 0.5s, color 0.5s;
 }
@@ -105,7 +105,7 @@ h1 {
     align-items: last baseline;
     user-select: none;
     color: var(--word-color);
-    font-size: 3vh;
+    font-size: 3vmin;
     transition: top 0.25s, font-size 0.3s, color 0.5s;
 }
 
@@ -117,8 +117,8 @@ h1 {
 /* Input focus and valid styles */
 input:focus + .inputLabel,
 input:valid + .inputLabel {
-    top: -20px;
-    font-size: 2vh;
+    top: -2.5vmin;
+    font-size: 2vmin;
     font-weight: 550;
     user-select: none;
 }
@@ -132,25 +132,23 @@ input:valid + .inputLabel {
 .errorMessage {
     position: relative;
     color: var(--error-color);
-    font-size: 2vh;
+    font-size: 1.5vmin;
     visibility: hidden;
-    margin-bottom: 6vh;
+    margin-bottom: 7vmin
+    
 }
 
-
 /* Error message for sign up */
-#errorUserLength, #errorUserTaken,
-#errorPswLength, #errorPswSymbol, 
-#errorPswUpper{
+#errorUser, #errorPsw, #errorConfirmation, #successfulSignIn{
     position: absolute;
-    top: 1vh;
+    top: 0.4vmin;
     left: 0;
 }
 
 /* Error message for sign in */
-#errorInvalid, #errorUserExist{
+#errorInvalid{
     position: absolute;
-    top: -5vh;
+    top: -6.5vmin;
     left: 0;
 }
 
@@ -158,18 +156,18 @@ input:valid + .inputLabel {
 .signInSection, .signUpSection {
     position: relative;
     text-align: center;
-    margin-top: 7vh;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
-    margin-bottom: 1em;
+    margin-top: 7vmin;
+    margin-left: 1.5vmin;
+    margin-right: 1.5vmin;
+    margin-bottom: 1vmin;
 }
 
 #backgroundButton {
     color: var(--word-color);
-    height: 2.5em;
+    height: 5.5vmin;
     width: 90%;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 2.3vmin;
     border: none;
     border-radius: 3px;
     background: var(--button-color);
@@ -179,11 +177,11 @@ input:valid + .inputLabel {
 
 #signInButton, #signUpButton {
     position: absolute;
-    height: 2.5em;
+    height: 5.5vmin;
     width: 90%;
     left: 5%;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 2.3vmin;
     border: none;
     border-radius: 3px;
     opacity: 0;
@@ -200,7 +198,6 @@ input:valid + .inputLabel {
 /* Redirect button and label styles */
 .redirectSection {
     text-align: center;
-    margin-bottom: 0.2em;
 }
 
 #redirectButton {
@@ -208,7 +205,7 @@ input:valid + .inputLabel {
     bottom: 0;
     border: none;
     background-color: transparent;
-    font-size: 0.75em;
+    font-size: 1.5vmin;
     color: var(--redirect-color);
     cursor: pointer;
     transition: color 0.5s;
@@ -216,50 +213,8 @@ input:valid + .inputLabel {
 
 #redirectLabel {
     color: var(--word-color);
-    font-size: 0.75em;
+    font-size: 1.5vmin;
     font-weight: 500;
     transition: color 0.5s;
 }
 
-/* Dark/Light mode button styles */
-.icon {
-    position: absolute;
-    top: 70%;
-    left: 3%;
-}
-
-.icon-button {
-    border: black;
-    border-radius: 20px;
-    cursor: pointer;
-    height: 10vh;
-    width: 10vh;
-    position: absolute;
-}
-
-.material-symbols-outlined.custom {
-    font-size: 8vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#darkButton {
-    background-color: black;
-    color: rgb(0, 255, 247);
-    border: 3px solid rgb(0, 225, 255);
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-#lightButton {
-    background: rgb(40, 208, 255);
-    color: rgb(255, 183, 0);
-    border: 3px solid rgb(255, 210, 98);
-    opacity: 1;
-    transition: opacity 1s;
-}
-
-#changeTheme {
-    opacity: 0;
-}

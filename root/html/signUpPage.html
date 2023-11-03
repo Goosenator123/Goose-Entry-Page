@@ -10,6 +10,7 @@
     
     <!-- Link to an external CSS stylesheet -->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/darkLightModeStyle.css">
     
     <!-- Import Google's icons  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
@@ -17,8 +18,8 @@
 
 <body>
 
-    <!-- Background divs for light and dark themes -->
-        <div id="backgroundImage"></div>
+    <!-- Background image -->
+    <div id="backgroundImage"></div>
 
     <!-- SignUp Window -->
     <div class="mainWindow">
@@ -37,8 +38,7 @@
 
                 <!-- Error messages for username -->
                 <div class="errorMessage">
-                    <label id="errorUserLength"></label>
-                    <label id="errorUserTaken"></label>
+                    <label id="errorUser"></label>
                 </div>
             </div>
 
@@ -51,9 +51,7 @@
 
                 <!-- error messages for password -->
                 <div class="errorMessage">
-                    <label id="errorPswLength"></label>
-                    <label id="errorPswSymbol"></label>
-                    <label id="errorPswUpper"></label>
+                    <label id="errorPsw"></label>
                 </div>
             </div>
 
@@ -67,24 +65,25 @@
                 <!-- Error messages for confirmation -->
                 <div class="errorMessage">
                     <label id="errorConfirmation"></label>
+                    <label id="successfulSignIn">asdasdasd</label>
                 </div>
             </div>
         
             <!-- Sign-in buttons -->
             <div class="signUpSection">
-                <button id="backgroundButton">SIGN UP</button>
-                <button type="submit" id="signUpButton">SIGN UP</button>
+                <button id="backgroundButton">REGISTER</button>
+                <button type="submit" id="signUpButton">REGISTER</button>
             </div>
         </form>
 
         <!-- Redirect to Sign In page -->
         <div class="redirectSection">
-            <label id="redirectLabel" for="redirectButton">Already have an account?</label>
+            <label id="redirectLabel">Already have an account?</label>
             <button id="redirectButton">Sign in now</button>
         </div>
     </div>
 
-        <!-- Icons section with dark and light mode buttons -->
+    <!-- Icons section with dark and light mode buttons -->
     <div class="icon">
         <button class="icon-button" id="darkButton">
             <span class="material-symbols-outlined custom">Dark_Mode</span>
@@ -97,7 +96,6 @@
 
 
     <!-- JavaScript files -->
-
     <script src="../js/darkMode_lightMode.js"></script>
     <script src="../js/register.js"></script>
 </body>
